@@ -1,0 +1,59 @@
+
+.form-container {
+    background-color: #fff;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.header {
+    background-color: #b19cd9;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.header h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.alumno {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.alumno:hover {
+    background-color: #555;
+}
+
+.expositor {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.expositor:hover {
+    background-color: #777;
+}
+
+.clave {
+    padding: 15px;
+    font-size: 18px;
+}
+
+.date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
