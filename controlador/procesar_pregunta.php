@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'alumno') {
     exit();
 }
 
-include($_SERVER['DOCUMENT_ROOT'] . '/PreguntasRespuestas/modelo/conexion.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/Equipo_PreguntasRepuestas/modelo/conexion.php');
 
 // Obtener el ID del usuario que ha iniciado sesión
 $user_id = $_SESSION['user_id'];

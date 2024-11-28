@@ -35,7 +35,7 @@ include 'controlador/procesar_pregunta.php';
             <h1 class="h3 m-0">¿Cuál es tu pregunta?</h1>
         </header>
 
-        <form method="POST" action="./controlador/procesar_pregunta.php">
+        <form method="POST" action="/Equipo_PreguntasRepuestas/controlador/procesar_pregunta.php">
             <main>
 
                 <div class="mb-3">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include($_SERVER['DOCUMENT_ROOT'] . '/PreguntasRespuestas/modelo/conexion.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/Equipo_PreguntasRepuestas/modelo/conexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $clave = $_POST['clave'];
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Login exitoso de Alumno
             $_SESSION['user_id'] = $result['Id_Usu'];
             $_SESSION['user_type'] = 'alumno'; // Guardamos el tipo de usuario
-            header("Location: /Equipo_PreguntasRepuestas/preguntas.php"); // Redirigir al formulario de alumno
+            header("Location: ../preguntas.php"); // Redirigir al formulario de alumno
             exit();
         } else {
             $error = "Matricula es incorrecta para alumno.";
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['id_ponente'] = $result['id_ponente']; // Guardar el ID del ponente
             $_SESSION['tema_ponente'] = $result['Tema_ponente'];
             $_SESSION['user_type'] = 'expositor'; // Guardamos el tipo de usuario
-            header("Location: /Equipo_PreguntasRepuestas/ContenedorPregunta.php"); // Redirigir al formulario de expositor
+            header("Location: ../ContenedorPregunta.php"); // Redirigir al formulario de expositor
             exit();
         } else {
             $error = "No se encontró un expositor con las letras ingresadas.";

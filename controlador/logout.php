@@ -8,6 +8,6 @@ $_SESSION = [];
 session_destroy();
 
 // Redirigir al inicio de sesión
-header("Location: /Equipo_PreguntasRepuestas//login.php");
+header("Location: /Equipo_PreguntasRepuestas/login.php");
 exit();
 ?>

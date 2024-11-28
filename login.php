@@ -27,7 +27,7 @@ $fecha_actual = date('d/m/Y');
             <h2>Inicio</h2>
         </div>
 
-        <form method="POST" action="./controlador/procesar_login.php">
+        <form method="POST" action="/Equipo_PreguntasRepuestas/controlador/procesar_login.php">
             <div class="d-grid gap-2 mt-3">
                 <button type="submit" name="alumno" value="alumno" class="btn alumno">Alumno</button>
             </div>

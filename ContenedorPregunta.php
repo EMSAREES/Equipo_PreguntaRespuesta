@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'expositor') {
 $tema_ponente = isset($_SESSION['tema_ponente']) ? $_SESSION['tema_ponente'] : '';
 
 
-include($_SERVER['DOCUMENT_ROOT'] . '/PreguntasRespuestas/modelo/conexion.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/Equipo_PreguntasRepuestas/modelo/conexion.php');
 
 // Verificar si el formulario fue enviado
 if (isset($_POST['btnEye']) && isset($_POST['id_pregunta'])) {
@@ -146,7 +146,7 @@ function removeTag(element, tag) {
 document.getElementById('search-btn').addEventListener('click', function() {
     if (tags.length > 0) {
         const queryString = tags.map(tag => `tags[]=${encodeURIComponent(tag)}`).join('&');
-        window.location.href = `/PreguntasRespuestas/controlador/procesar_busqueda.php?${queryString}`;
+        window.location.href = `/Equipo_PreguntasRepuestas/controlador/procesar_busqueda.php?${queryString}`;
     } else {
         alert('Por favor, añade al menos una etiqueta antes de buscar.');
     }
@@ -191,7 +191,7 @@ document.getElementById('search-btn').addEventListener('click', function() {
         const queryString = tags.map(tag => `tags[]=${encodeURIComponent(tag)}`).join('&');
         console.log("Redirigiendo con la cadena de consulta:", queryString);
         // Redirigir al archivo PHP con las etiquetas como parámetros
-        window.location.href = `/PreguntasRespuestas/controlador/procesar_busqueda.php?${queryString}`;
+        window.location.href = `/Equipo_PreguntasRepuestas/controlador/procesar_busqueda.php?${queryString}`;
     } else {
         // Alerta si no se ha añadido ninguna etiqueta
         console.log("Intento de búsqueda sin etiquetas");
@@ -201,7 +201,7 @@ document.getElementById('search-btn').addEventListener('click', function() {
 </script>
 <!-------------------------------------------Parte de Adan----------------------------------->
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . '/PreguntasRespuestas/modelo/conexion.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/Equipo_PreguntasRepuestas/modelo/conexion.php');
 
 // Realizamos un JOIN entre la tabla Pregunta y Usuario
 $sql = "SELECT p.Id_Pregunta, 
